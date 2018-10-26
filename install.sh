@@ -45,9 +45,9 @@ plain='\033[0m'
 clear
 echo "---------------------------------------------"
 echo "  Install MTProxy For Telegram with Onekey"
-echo "  Author: 雨落无声"
-echo "  URL: https://ylws.me"
-echo "  Telegram: https://t.me/ylwsclub"
+echo "  Author: 雨落无声" Modify by 7colorblog
+echo "  URL: https://www.7colorblog.com"
+echo "  七彩杂货铺: http://t.cn/Ezs29Ie"
 echo "---------------------------------------------"
 echo ""
 
