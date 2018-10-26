@@ -15,4 +15,6 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/MT
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/MTProxy-Bash/master/uninstall.sh && bash uninstall.sh
 ```
-
+# 广告
+个人博客:https://www.7colorblog.com
+七彩杂货铺（都是黑科技）：http://t.cn/Ezs29Ie
