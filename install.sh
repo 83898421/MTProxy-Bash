@@ -45,9 +45,9 @@ plain='\033[0m'
 clear
 echo "---------------------------------------------"
 echo "  Install MTProxy For Telegram with Onekey"
-echo "  Author: 雨落无声" Modify by 7colorblog
-echo "  URL: https://www.7colorblog.com"
-echo "  七彩杂货铺: http://t.cn/Ezs29Ie"
+echo "  Author: 雨落无声"
+echo "  URL: https://ylws.me"
+echo "  Telegram: https://t.me/ylwsclub"
 echo "---------------------------------------------"
 echo ""
 
@@ -126,13 +126,11 @@ cat << EOF > /etc/systemd/system/MTProxy.service
 [Unit]
 Description=MTProxy
 After=network.target
-
 [Service]
 Type=simple
 WorkingDirectory=/usr/local/bin/
 ExecStart=/usr/local/bin/mtproto-proxy -u nobody -p 64335 -H ${uport} -S ${SECRET} ${TAG} ${NAT} --aes-pwd /etc/proxy-secret /etc/proxy-multi.conf
 Restart=on-failure
-
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -189,4 +187,3 @@ echo "端口：      ${uport}"
 echo "Secret：   ${SECRET}"
 echo ""
 echo -e "TG代理链接：${green}tg://proxy?server=${IP}&port=${uport}&secret=${SECRET}${plain}"
-
