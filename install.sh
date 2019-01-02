@@ -44,10 +44,10 @@ plain='\033[0m'
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
-echo "  Install MTProxy For Telegram with Onekey"
-echo "  Author: 雨落无声"
-echo "  URL: https://ylws.me"
-echo "  Telegram: https://t.me/ylwsclub"
+echo "  Install：欢迎使用MTProxy一键安装脚本"
+echo "  Author: 雨落无声 Change by 7colorblog"
+echo "  URL: https://www.7colorblog.com"
+echo "  Article: https://www.7colorblog.com/?id=45"
 echo "---------------------------------------------"
 echo ""
 
