@@ -44,14 +44,14 @@ plain='\033[0m'
 # 打印欢迎信息
 clear
 echo "---------------------------------------------"
-echo "  Install：欢迎使用MTProxy一键安装脚本"
-echo "  Author: 雨落无声 Change by 7colorblog"
+echo "  Welcome: 欢迎使用MTProxy一键安装脚本"
+echo "  Author: 7colorblog"
 echo "  URL: https://www.7colorblog.com"
-echo "  Article: https://www.7colorblog.com/?id=45"
+echo "  Telegram: https://www.7colorblog.com"
 echo "---------------------------------------------"
 echo ""
 
-
+#判断如果有secret就提示已经安装
 if [ -f "/etc/secret" ]; then 
 	IP=$(curl -4 -s ip.sb)
 	SECRET=$(cat /etc/secret)
@@ -66,25 +66,25 @@ if [ -f "/etc/secret" ]; then
 fi
 
 # 输入代理端口
-read -p "Input the Port for running MTProxy [Default: 5000]： " uport
+stty erase '^H' && read -p "请输入MTProxy的代理端口 [默认: 7777]： " uport
 if [[ -z "${uport}" ]];then
-	uport="5000"
+	uport="7777"
 fi
 
 # 输入secret
-read -p "Input the Secret for running MTProxy [Default: Autogeneration]： " SECRET
+stty erase '^H' && read -p "请输入MTProxy的秘钥secret [默认: 自动生成]： " SECRET
 if [[ -z "${SECRET}" ]];then
 	SECRET=$(head -c 16 /dev/urandom | xxd -ps)
 fi
 
 # 输入TAG
-read -p "Input the Tag for running MTProxy [Default: None]： " TAG
+stty erase '^H' && read -p "请输入MTProxy的运行目录 [默认: 无]： " TAG
 if [[ -n "${TAG}" ]];then
 	TAG="-P "${TAG}
 fi
 
 # 输入nat信息
-read -p "Input NAT infomation like <local-addr>:<global-addr> if you are using NAT network, otherwise just press ENTER directly： " NAT
+stty erase '^H' && read -p "Input NAT infomation like <local-addr>:<global-addr> if you are using NAT network, otherwise just press ENTER directly： " NAT
 if [[ -n "${NAT}" ]];then
 	NAT="--nat-info "${NAT}
 fi
